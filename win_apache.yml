@@ -1,6 +1,8 @@
 ---
 - name: Install Apache from an MSI 
-  hosts: all 
+  hosts: all
+  username: Administrator
+  password: YVC4$MeTwb$jwm=Hd5GvvQj.I*5AF39a
  
   tasks:
     - name: Download the Apache installer
