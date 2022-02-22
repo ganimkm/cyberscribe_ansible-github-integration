@@ -2,6 +2,7 @@
 - name: Install Security Updates
   # note: your 'hosts' section will likely be different as this is a group I created for my Red Hat hosts in Ansible Tower itself.
   hosts: all
+  become: yes
   # gather_facts: no
   tasks:
     - name: Upgrade all packages
@@ -9,8 +10,8 @@
         name: '*'
         state: latest
         security: yes
-     - name: Reboot servers
-       reboot:
+    - name: Reboot servers
+      reboot:
         pre_reboot_delay: 90
         msg: "!!!Attention, server will be rebooted in 90 seconds!!!Gani!!!"
 ...
