@@ -1,9 +1,6 @@
 ---
 - name: Install Apache from an MSI 
   hosts: all
-  my_user: Administrator
-  mysecret: YVC4$MeTwb$jwm=Hd5GvvQj.I*5AF39a
- 
   tasks:
     - name: Download the Apache installer
       win_get_url:
